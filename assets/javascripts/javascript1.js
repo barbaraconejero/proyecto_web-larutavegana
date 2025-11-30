@@ -1,24 +1,81 @@
-function scrollToNextSection() {
-    const next = document.getElementById("seccion2");
-    next.scrollIntoView({ behavior: "smooth" });
-}
-// efecto rebote al sacar el mouse de cada sticker
+/* ==========================================
+   EFECTO DE ESCRITURA EN EL BUSCADOR
+========================================== */
 
-document.querySelectorAll('.sticker').forEach(sticker => {
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const searchInput = document.getElementById('search-blocked');
+    const textToType = "Encuentra tu nuevo restaurante vegano favorito...";
+    let index = 0;
 
-    // Al salir el mouse del sticker
-    sticker.addEventListener('mouseleave', () => {
+    searchInput.placeholder = "";
 
-        // agregamos la clase temporal de rebote
-        sticker.classList.add('bouncing');
+    function typeWriter() {
+        if (index < textToType.length) {
+            searchInput.placeholder += textToType.charAt(index);
+            index++;
+            setTimeout(typeWriter, 70);
+        }
+    }
 
-        // quitamos la clase después de la animación
-        setTimeout(() => {
-            sticker.classList.remove('bouncing');
-        }, 450); // duración exacta del bounceExit
-    });
-
+    setTimeout(typeWriter, 1000);
 });
 
+
+/* ==========================================
+   SCROLL A LA SIGUIENTE SECCIÓN
+========================================== */
+
+function scrollToNextSection() {
+    const next = document.getElementById("seccion2");
+    if (next) {
+        next.scrollIntoView({ behavior: "smooth" });
+    }
+}
+
+
+/* ==========================================
+   MAZO DE TARJETAS — ANIMACIÓN LIMPIA
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const stickers = document.querySelectorAll(".sticker");
+
+    // Inclinación inicial aleatoria (solo UNA VEZ)
+    stickers.forEach(sticker => {
+        const rot = (Math.random() * 14) - 7; // entre -7 y +7
+        sticker.style.setProperty("--rot", `${rot}deg`);
+    });
+
+    let currentCenter = 2; // tarjeta que inicia al centro
+
+    // Función que organiza el mazo
+    function rearrange() {
+        stickers.forEach((sticker, i) => {
+            sticker.classList.remove("left", "right", "center");
+
+            if (i === currentCenter) {
+                sticker.classList.add("center");
+            } 
+            else if (i < currentCenter) {
+                sticker.classList.add("left");
+            } 
+            else {
+                sticker.classList.add("right");
+            }
+        });
+    }
+
+    // Click: mover tarjeta seleccionada al centro
+    stickers.forEach((sticker, index) => {
+        sticker.addEventListener("click", () => {
+            currentCenter = index;
+            rearrange();
+        });
+    });
+
+    rearrange(); // Render inicial
+});
 
 
