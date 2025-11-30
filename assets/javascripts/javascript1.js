@@ -78,4 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
     rearrange(); // Render inicial
 });
 
+/* ==========================================
+   FADE-IN AL HACER SCROLL (INTRO SECTION)
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const intro = document.querySelector(".intro-section");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                intro.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(intro);
+});
 

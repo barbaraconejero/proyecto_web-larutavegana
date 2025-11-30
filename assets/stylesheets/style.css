@@ -200,6 +200,29 @@ body {
     font-size: 2rem;
 }
 
+/* ================= SECCIÓN EDITORIAL ================= */
+
+.intro-section {
+    background: #FFF6E7;
+    padding: 90px 20px;   /* ← antes 140px */
+    text-align: center;
+}
+
+
+.intro-text {
+    font-family: 'Lilita One', sans-serif;
+    color: #ffb347;
+    
+    font-size: clamp(3.2rem, 7vw, 5rem);  /* 🔥 más grande */
+    
+    text-align: center;
+    max-width: 1400px;                   /* 🔥 permite mayor anchura */
+    
+    margin: 0 auto;
+    line-height: 1.1;                    /* más compacto para ocupar pantalla */
+    text-transform: none;
+}
+
 
 
 
