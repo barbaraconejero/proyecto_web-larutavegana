@@ -26,90 +26,97 @@ body {
 
 .title-massive {
     font-family: 'Lilita One', sans-serif;
-    font-size: 7vw;      
+    font-size: 7vw;
     white-space: nowrap;
-    color: #E6A93A;
+    letter-spacing: 1.5vw;
+    margin: 0;
+    color: #ffb347; /* 🔥 naranjo chillón */
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3vw;
-    margin: 0;
-    letter-spacing: 1.5vw;   /* 🔥 equivalente visual a 1.5cm */
+    gap: 2.8vw;
 }
 
 .title-icon {
-    width: 11vw;     /* 🔥 AGRANDADO */
-    height: auto;
+    width: 11vw;
+    filter: hue-rotate(-20deg) brightness(1.4) saturate(1.4); /* MÁS NARANJA */
 }
 
 /* ================= STICKERS ================= */
 
 .sticker-zone {
-    position: relative;
     margin-top: 40px;
-    height: 500px; 
+    width: 100%;
+    height: 480px;
+    position: relative;
 }
 
-/* GLOBO OVALADO CON COLA */
+/* BASE DE TODOS LOS STICKERS */
 .sticker {
-    position: absolute;
     width: 330px;
-    padding: 22px 28px;
-    border-radius: 50px;
+    padding: 26px;
     font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
-    line-height: 1.3;
-    color: #111;
     text-align: center;
-
-    /* sombra */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
-
-    /* animación */
-    animation: popIn 0.6s ease-out forwards;
+    color: #ffffff;
+    position: absolute;
+    animation: popIn 0.7s ease-out forwards;
     opacity: 0;
-    transform: scale(0) rotate(-8deg);
-
-    /* cola del globo */
-    position: absolute;
 }
 
-.sticker::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 15px 12px 0 12px;
-    border-style: solid;
-    border-color: inherit transparent transparent transparent;
+/* ========== FORMAS EXACTAS DE LOS STICKERS ========== */
+
+/* 🍋 Sticker limón */
+.lemon {
+    background-color: #ffc400;
+    clip-path: polygon(
+        10% 0%, 90% 0%, 100% 50%, 90% 100%, 
+        10% 100%, 0% 50%
+    );
+    border: 4px solid #0b5d05;
+    color: #0b5d05;
 }
 
-/* COLORES */
-.pink { background-color: #FF70C2; border-color: #FF70C2; }
-.green { background-color: #B6FFA8; border-color: #B6FFA8; }
+/* 🍌 Sticker banana (ovalado vertical) */
+.banana {
+    background-color: #2aa7ff;
+    border-radius: 45% / 55%;
+    border: 5px solid #014a99;
+    color: #014a99;
+}
 
-/* ================= ANIMACIÓN POP ================= */
+/* 🌿 Sticker estallido estilo "Cookery" */
+.burst {
+    background-color: #3aa76d;
+    clip-path: polygon(
+        50% 0%, 60% 8%, 75% 5%, 85% 15%, 100% 20%, 
+        90% 35%, 95% 50%, 85% 60%, 95% 75%, 
+        80% 85%, 65% 80%, 50% 95%, 35% 80%,
+        20% 85%, 5% 75%, 15% 60%, 5% 50%, 10% 35%, 
+        0% 20%, 15% 15%, 25% 5%, 40% 8%
+    );
+    border: 4px solid #1a5c3d;
+    color: #ffffff;
+}
 
+/* INCLINACIONES */
+.rotate-left { transform: rotate(-6deg) scale(0); }
+.rotate-right { transform: rotate(5deg) scale(0); }
+
+/* POSICIONES DESORDENADAS PERO EQUILIBRADAS */
+.sticker:nth-child(1) { top: 0px; left: 4%; }
+.sticker:nth-child(2) { top: 80px; left: 28%; }
+.sticker:nth-child(3) { top: 10px; left: 55%; }
+.sticker:nth-child(4) { top: 160px; left: 10%; }
+.sticker:nth-child(5) { top: 200px; left: 60%; }
+.sticker:nth-child(6) { top: 260px; left: 32%; }
+
+/* ANIMACIÓN POP */
 @keyframes popIn {
-    0% { transform: scale(0) rotate(-8deg); opacity: 0; }
-    60% { transform: scale(1.1) rotate(0deg); opacity: 1; }
-    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    0% { opacity: 0; transform: scale(0) rotate(-8deg); }
+    65% { opacity: 1; transform: scale(1.1) rotate(0deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
-
-/* ================= POSICIONES (DESORDEN LÓGICO) ================= */
-
-.sticker:nth-child(1) { top: 10px; left: 5%; transform: rotate(-4deg) scale(0); }
-.sticker:nth-child(2) { top: 80px; left: 30%; transform: rotate(3deg) scale(0); }
-.sticker:nth-child(3) { top: 20px; left: 60%; transform: rotate(-6deg) scale(0); }
-.sticker:nth-child(4) { top: 140px; left: 10%; transform: rotate(2deg) scale(0); }
-.sticker:nth-child(5) { top: 200px; left: 55%; transform: rotate(-3deg) scale(0); }
-.sticker:nth-child(6) { top: 120px; left: 75%; transform: rotate(4deg) scale(0); }
-.sticker:nth-child(7) { top: 260px; left: 20%; transform: rotate(-5deg) scale(0); }
-.sticker:nth-child(8) { top: 300px; left: 65%; transform: rotate(6deg) scale(0); }
-.sticker:nth-child(9) { top: 350px; left: 40%; transform: rotate(-2deg) scale(0); }
-.sticker:nth-child(10) { top: 180px; left: 0%; transform: rotate(3deg) scale(0); }
 
 /* ================= SEARCH BAR ================= */
 
@@ -123,9 +130,9 @@ body {
 
 .search-wrapper input {
     width: 100%;
-    padding: 20px;
+    padding: 22px;
     border-radius: 40px;
-    background: #f1f1f1;
+    background: #f3f3f3;
     border: none;
     font-size: 20px;
     color: #666;
@@ -135,10 +142,10 @@ body {
     position: absolute;
     right: 3%;
     top: 11px;
-    height: 50px;
-    width: 50px;
+    height: 52px;
+    width: 52px;
     border: none;
-    background: #FFE14A;
+    background: #ffdd55;
     border-radius: 50%;
     font-size: 22px;
     cursor: pointer;
@@ -152,6 +159,46 @@ body {
     padding: 150px 40px;
     text-align: center;
     font-size: 2rem;
+}
+/* ================= HOVER ANIMADO DE STICKERS ================= */
+
+.sticker {
+    transition: transform 0.35s ease, 
+                box-shadow 0.35s ease, 
+                filter 0.35s ease;
+    cursor: pointer;
+}
+
+.sticker:hover {
+    transform: scale(1.15) rotate(0deg) translateY(-10px);
+    box-shadow: 0 14px 22px rgba(0,0,0,0.35);
+    z-index: 20;
+    filter: brightness(1.05);
+    animation: wiggle 0.45s ease-in-out;
+}
+
+/* ——— ANIMACIÓN WIGGLE (rotación suave) ——— */
+
+@keyframes wiggle {
+    0%   { transform: scale(1.15) rotate(0deg) translateY(-10px); }
+    25%  { transform: scale(1.15) rotate(4deg) translateY(-10px); }
+    50%  { transform: scale(1.17) rotate(-4deg) translateY(-12px); }
+    75%  { transform: scale(1.15) rotate(3deg) translateY(-10px); }
+    100% { transform: scale(1.15) rotate(0deg) translateY(-10px); }
+}
+
+/* ========== ANIMACIÓN DE REBOTE AL SALIR (JS) ========= */
+
+@keyframes bounceExit {
+    0%   { transform: scale(1.15) translateY(-10px); }
+    30%  { transform: scale(1.05) translateY(0px); }
+    60%  { transform: scale(1.12) translateY(-6px); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+/* clase aplicada por JavaScript */
+.sticker.bouncing {
+    animation: bounceExit 0.45s ease-out;
 }
 
 
