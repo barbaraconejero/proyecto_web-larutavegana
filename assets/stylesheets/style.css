@@ -195,7 +195,7 @@ body {
 
 .veggie-section {
     background-color: #1E5A33;
-    padding: 60px 20px;                /* antes: 140 → menos aire */
+    padding: 35px 20px 50px;                /* antes: 140 → menos aire */
     position: relative;
     overflow: hidden;
 
@@ -249,7 +249,7 @@ body {
 
 .orange-section {
     background: #ffb347;
-    padding: 80px 20px 140px; /* MENOS aire arriba */
+    padding: 60px 20px 120px; /* MENOS aire arriba */
     color: #fff6e7;
     font-family: 'Figtree', sans-serif;
 }
