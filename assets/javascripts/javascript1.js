@@ -52,9 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
         stickers.forEach((sticker, i) => {
             sticker.classList.remove("left", "right", "center");
 
-            if (i === currentCenter) sticker.classList.add("center");
-            else if (i < currentCenter) sticker.classList.add("left");
-            else sticker.classList.add("right");
+            if (i === currentCenter) {
+                sticker.classList.add("center");
+            } else if (i < currentCenter) {
+                sticker.classList.add("left");
+            } else {
+                sticker.classList.add("right");
+            }
         });
     }
 
@@ -74,15 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
 ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
-    const intro = document.querySelector(".intro-section");
+    const introSection = document.querySelector(".intro-section");
 
-    const observer = new IntersectionObserver(entries => {
+    const observerIntro = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) intro.classList.add("visible");
+            if (entry.isIntersecting) {
+                introSection.classList.add("visible");
+            }
         });
     }, { threshold: 0.3 });
 
-    observer.observe(intro);
+    if (introSection) observerIntro.observe(introSection);
 });
 
 
@@ -93,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const shapes = document.querySelectorAll(".veggie-shape");
 
-    const observer = new IntersectionObserver(entries => {
+    const observerShapes = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const rot = (Math.random() * 10) - 5;
@@ -103,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, { threshold: 0.2 });
 
-    shapes.forEach(el => observer.observe(el));
+    shapes.forEach(el => observerShapes.observe(el));
 });
 
 
@@ -122,5 +128,51 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+});
+/* ============================================================
+   FONDO DINÁMICO DE ZANAHORIAS — GENERADOR ALEATORIO
+============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const layer = document.querySelector(".carrot-layer");
+
+    if (!layer) return;
+
+    const NUM = 18; // cantidad de zanahorias en el fondo
+
+    for (let i = 0; i < NUM; i++) {
+
+        const img = document.createElement("img");
+        img.src = "assets/images/zanahoria-verde.png";
+        img.classList.add("carrot-shape");
+
+        // tamaño aleatorio
+        const scale = (Math.random() * 0.6) + 0.6; // 0.6 a 1.2
+        img.style.setProperty("--scale", scale);
+
+        // rotación aleatoria
+        const rot = (Math.random() * 90 - 45) + "deg";
+        img.style.setProperty("--rot", rot);
+
+        // posición aleatoria
+        img.style.top = Math.random() * 100 + "%";
+        img.style.left = Math.random() * 100 + "%";
+
+        layer.appendChild(img);
+    }
+
+    // animación al aparecer en pantalla
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                document.querySelectorAll(".carrot-shape").forEach(el => {
+                    el.classList.add("visible");
+                });
+            }
+        });
+    }, { threshold: 0.05 });
+
+    observer.observe(layer);
 });
 
