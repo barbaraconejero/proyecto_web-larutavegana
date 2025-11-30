@@ -1,6 +1,4 @@
-/* ==========================
-    ESTILOS GENERALES
-========================== */
+/* ================= GENERAL ================= */
 
 body {
     margin: 0;
@@ -10,89 +8,79 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================
-    HEADER / HERO
-========================== */
+/* ================= HERO ================= */
 
 .hero {
-    text-align: center;
-    padding: 60px 20px 120px;
+    padding: 40px 20px 120px;
     background-color: #1E5A33;
-    position: relative;
+    text-align: center;
 }
 
-/* ==========================
-    TÍTULO GIGANTE
-========================== */
+/* ================= TÍTULO MASIVO ================= */
 
-.title-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.title-large {
+.title-massive {
     font-family: 'Lilita One', sans-serif;
-    font-size: 9vw; /* Toma casi todo el ancho de un computador */
-    color: #E6A93A;  /* dorado más cálido */
+    font-size: 13vw; /* TÍTULO A TODO EL ANCHO */
+    color: #E6A93A;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 3vw;
+    margin: 0;
 }
 
 .title-icon {
-    width: 9vw;
+    width: 12vw;
     height: auto;
 }
 
-/* ==========================
-    STICKERS ESTILO FLUOR
-========================== */
+/* ================= STICKERS ================= */
 
-.stickers-area {
-    margin-top: 50px;
+.sticker-zone {
     position: relative;
-    height: 380px;
+    height: 280px; /* más compacto, se superponen más */
+    margin-top: 30px;
 }
 
 .sticker {
     position: absolute;
-    padding: 20px 25px;
-    border-radius: 20px;
-    max-width: 300px;
+    padding: 25px 35px;
+    font-size: 20px;
     font-weight: 700;
-    font-size: 17px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    animation: pop 0.5s forwards ease-out;
+    width: 300px;
+    color: #111;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+    animation: popIn 0.6s ease-out forwards;
+    transform: scale(0);
 }
 
 /* Colores fluorescentes */
-.pink { background-color: #FF70C2; color: black; }
-.yellow { background-color: #FFE14A; color: #222; }
-.green { background-color: #B6FFA8; color: #134820; }
+.pink { background-color: #FF70C2; }
+.yellow { background-color: #FFE14A; }
+.green { background-color: #B6FFA8; }
 
-/* Posiciones desordenadas */
-.sticker:nth-child(1) { top: 10px; left: 10%; }
-.sticker:nth-child(2) { top: 60px; left: 60%; }
-.sticker:nth-child(3) { top: 160px; left: 30%; }
-.sticker:nth-child(4) { top: 210px; left: 70%; }
-.sticker:nth-child(5) { top: 90px; left: 35%; }
+/* Formas */
+.circle { border-radius: 50%; height: 220px; width: 220px; padding: 40px; }
+.star { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.rounded { border-radius: 30px; }
+.triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); padding-top: 90px; }
+.bubble { border-radius: 60px; }
 
-/* Rotaciones */
-.rotate-1 { transform: rotate(-6deg) scale(0); }
-.rotate-2 { transform: rotate(5deg) scale(0); }
-.rotate-3 { transform: rotate(-3deg) scale(0); }
+/* Posiciones superpuestas */
+.sticker:nth-child(1) { top: 10px; left: 8%; transform: rotate(-8deg) scale(0); }
+.sticker:nth-child(2) { top: 40px; left: 55%; transform: rotate(6deg) scale(0); }
+.sticker:nth-child(3) { top: 120px; left: 30%; transform: rotate(-4deg) scale(0); }
+.sticker:nth-child(4) { top: 150px; left: 65%; transform: rotate(9deg) scale(0); }
+.sticker:nth-child(5) { top: 80px; left: 20%; transform: rotate(-6deg) scale(0); }
 
-/* POP ANIMATION */
-@keyframes pop {
-    0% { transform: scale(0) rotate(-5deg); opacity: 0; }
-    60% { transform: scale(1.1) rotate(0deg); opacity: 1; }
+/* Animación POP */
+@keyframes popIn {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    60% { transform: scale(1.15) rotate(0deg); opacity: 1; }
     100% { transform: scale(1) rotate(0deg); }
 }
 
-/* ==========================
-    SEARCH BAR BLOQUEADA
-========================== */
+/* ================= SEARCH BAR ================= */
 
 .search-wrapper {
     margin-top: 80px;
@@ -112,10 +100,6 @@ body {
     color: #666;
 }
 
-.search-wrapper input::placeholder {
-    color: #808080;
-}
-
 .search-btn {
     position: absolute;
     right: 7%;
@@ -130,9 +114,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ==========================
-    SECCIÓN SIGUIENTE
-========================== */
+/* ================= NEXT SECTION ================= */
 
 .next-section {
     background: #F9F9F9;
