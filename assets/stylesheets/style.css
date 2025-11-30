@@ -1,15 +1,87 @@
 body {
-    background-color: #012901; /* DarkGreen */
+    background-color: #012901; /* o el color que elijas */
     margin: 0;
     padding: 0;
 }
 
-h1 {
+/* ======= HEADER ======= */
+.hero {
+    background-color: #255C33;
+    padding: 80px 20px 120px;
     text-align: center;
-    font-size: 4rem;
-    font-family: 'Parisienne', cursive; 
+    position: relative;
     color: white;
-    margin-top: 20vh; /* para centrar visualmente */
+    font-family: 'Figtree', sans-serif;
 }
+
+/* ======= TÍTULO ======= */
+.title {
+    font-family: 'Lilita One', sans-serif;
+    color: #D9A441;
+    font-size: 70px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-icon {
+    width: 70px;
+}
+
+/* ======= STICKERS ======= */
+.stickers-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sticker {
+    background-color: #E5F7DD;
+    border-radius: 20px;
+    padding: 18px 25px;
+    max-width: 260px;
+    color: #1D3F27;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    transform: scale(0);
+    animation: pop 0.5s ease forwards;
+    animation-delay: var(--delay);
+}
+
+.sticker:nth-child(1) { --delay: 0.2s; }
+.sticker:nth-child(2) { --delay: 0.4s; }
+.sticker:nth-child(3) { --delay: 0.6s; }
+.sticker:nth-child(4) { --delay: 0.8s; }
+.sticker:nth-child(5) { --delay: 1s; }
+
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* ======= SEARCH BAR ======= */
+.search-bar {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: 'Figtree', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 
 
