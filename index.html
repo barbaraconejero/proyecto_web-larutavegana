@@ -1,35 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>La ruta vegana</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ruta Vegana</title>
+
+    <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/stylesheets/style.css?v=20251129">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
 </head>
+
 <body>
 
 <header class="hero">
-    <div class="title-container">
-        <h1 class="title">LA RUTA 
-            <img src="/Users/barbaraconejero/Documents/GitHub/proyecto_web-larutavegana/assets/images/icono-zanahoria.png" class="logo-icon" alt="logo"> 
+
+    <!-- TÍTULO GIGANTE -->
+    <div class="title-wrapper">
+        <h1 class="title-large">
+            LA RUTA
+            <img src="assets/images/icono-zanahoria.png" class="title-icon" alt="icono">
             VEGANA
         </h1>
     </div>
 
-    <div class="stickers-container">
-        <div class="sticker">No se donde hay buenos restaurantes veganos en Santiago.</div>
-        <div class="sticker">No hay oferta gastronomica vegana en la capital.</div>
-        <div class="sticker">Me gustaría conocer lugares veganos buenos, bonitos y baratos.</div>
-        <div class="sticker">No sé a qué restaurantes ir con mis amigos que tengan buenas opciones veganas.</div>
-        <div class="sticker">Quiero buenas recomendaciones de restaurantes veganos de comida asiática.</div>
+    <!-- STICKERS -->
+    <div class="stickers-area">
+        <div class="sticker pink rotate-1">No sé dónde hay buenos restaurantes veganos en Santiago.</div>
+        <div class="sticker yellow rotate-2">No hay oferta gastronómica vegana en la capital.</div>
+        <div class="sticker green rotate-3">Me gustaría conocer lugares veganos buenos, bonitos y baratos.</div>
+        <div class="sticker pink rotate-2">No sé a qué restaurantes ir con mis amigos que tengan buenas opciones veganas.</div>
+        <div class="sticker yellow rotate-1">Quiero buenas recomendaciones de comida vegana asiática.</div>
     </div>
 
-    <div class="search-bar">
-        <input id="search-input" type="text" placeholder="">
+    <!-- BARRA DE BÚSQUEDA BLOQUEADA -->
+    <div class="search-wrapper">
+        <input id="search-blocked" type="text" placeholder="Comienza tu búsqueda" disabled>
+
+        <button class="search-btn" onclick="scrollToNextSection()">
+            🔍
+        </button>
     </div>
+
 </header>
 
+<!-- SECCIÓN SIGUIENTE -->
+<section id="seccion2" class="next-section">
+    <h2>Aquí comienza tu ruta vegana</h2>
+</section>
 
+<!-- JAVASCRIPT -->
+<script src="assets/javascripts/javascript1.js"></script>
 
-    <script src="assets/javascripts/javascript1.js"></script>
+</body>
+</html>
+

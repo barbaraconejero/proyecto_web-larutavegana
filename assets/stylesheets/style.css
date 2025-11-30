@@ -1,87 +1,146 @@
+/* ==========================
+    ESTILOS GENERALES
+========================== */
+
 body {
-    background-color: #012901; /* o el color que elijas */
     margin: 0;
     padding: 0;
-}
-
-/* ======= HEADER ======= */
-.hero {
-    background-color: #255C33;
-    padding: 80px 20px 120px;
-    text-align: center;
-    position: relative;
-    color: white;
+    background-color: #143B24;
     font-family: 'Figtree', sans-serif;
+    overflow-x: hidden;
 }
 
-/* ======= TÍTULO ======= */
-.title {
-    font-family: 'Lilita One', sans-serif;
-    color: #D9A441;
-    font-size: 70px;
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
+/* ==========================
+    HEADER / HERO
+========================== */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 120px;
+    background-color: #1E5A33;
+    position: relative;
 }
 
-.logo-icon {
-    width: 70px;
-}
+/* ==========================
+    TÍTULO GIGANTE
+========================== */
 
-/* ======= STICKERS ======= */
-.stickers-container {
-    margin-top: 40px;
+.title-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+}
+
+.title-large {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 9vw; /* Toma casi todo el ancho de un computador */
+    color: #E6A93A;  /* dorado más cálido */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.title-icon {
+    width: 9vw;
+    height: auto;
+}
+
+/* ==========================
+    STICKERS ESTILO FLUOR
+========================== */
+
+.stickers-area {
+    margin-top: 50px;
+    position: relative;
+    height: 380px;
 }
 
 .sticker {
-    background-color: #E5F7DD;
+    position: absolute;
+    padding: 20px 25px;
     border-radius: 20px;
-    padding: 18px 25px;
-    max-width: 260px;
-    color: #1D3F27;
-    font-weight: 600;
-    font-size: 15px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-    transform: scale(0);
-    animation: pop 0.5s ease forwards;
-    animation-delay: var(--delay);
+    max-width: 300px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    animation: pop 0.5s forwards ease-out;
 }
 
-.sticker:nth-child(1) { --delay: 0.2s; }
-.sticker:nth-child(2) { --delay: 0.4s; }
-.sticker:nth-child(3) { --delay: 0.6s; }
-.sticker:nth-child(4) { --delay: 0.8s; }
-.sticker:nth-child(5) { --delay: 1s; }
+/* Colores fluorescentes */
+.pink { background-color: #FF70C2; color: black; }
+.yellow { background-color: #FFE14A; color: #222; }
+.green { background-color: #B6FFA8; color: #134820; }
 
+/* Posiciones desordenadas */
+.sticker:nth-child(1) { top: 10px; left: 10%; }
+.sticker:nth-child(2) { top: 60px; left: 60%; }
+.sticker:nth-child(3) { top: 160px; left: 30%; }
+.sticker:nth-child(4) { top: 210px; left: 70%; }
+.sticker:nth-child(5) { top: 90px; left: 35%; }
+
+/* Rotaciones */
+.rotate-1 { transform: rotate(-6deg) scale(0); }
+.rotate-2 { transform: rotate(5deg) scale(0); }
+.rotate-3 { transform: rotate(-3deg) scale(0); }
+
+/* POP ANIMATION */
 @keyframes pop {
-    0% { transform: scale(0); opacity: 0; }
-    70% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); }
+    0% { transform: scale(0) rotate(-5deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(0deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
 }
 
-/* ======= SEARCH BAR ======= */
-.search-bar {
-    margin-top: 50px;
+/* ==========================
+    SEARCH BAR BLOQUEADA
+========================== */
+
+.search-wrapper {
+    margin-top: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
-.search-bar input {
-    width: 60%;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 18px;
+.search-wrapper input {
+    width: 90%;
+    padding: 20px;
+    border-radius: 40px;
+    background: #f1f1f1;
     border: none;
-    outline: none;
-    background-color: #f2f2f2;
-    color: #333;
-    font-family: 'Figtree', sans-serif;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 20px;
+    color: #666;
 }
+
+.search-wrapper input::placeholder {
+    color: #808080;
+}
+
+.search-btn {
+    position: absolute;
+    right: 7%;
+    top: 11px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: #ffe14a;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+    SECCIÓN SIGUIENTE
+========================== */
+
+.next-section {
+    background: #F9F9F9;
+    padding: 150px 40px;
+    text-align: center;
+    font-size: 2rem;
+}
+
 
 
 

@@ -1,13 +1,5 @@
-const input = document.getElementById("search-input");
-const text = "Comienza tu búsqueda";
-let i = 0;
-
-function typeEffect() {
-    if (i < text.length) {
-        input.setAttribute("placeholder", input.placeholder + text.charAt(i));
-        i++;
-        setTimeout(typeEffect, 80);
-    }
+function scrollToNextSection() {
+    const next = document.getElementById("seccion2");
+    next.scrollIntoView({ behavior: "smooth" });
 }
 
-window.onload = typeEffect;
