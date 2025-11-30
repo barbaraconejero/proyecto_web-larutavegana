@@ -189,82 +189,59 @@ body {
    SECCIÓN VERDE — ZANAHORIAS + TEXTO
 ============================================================ */
 
+/* ============================================================
+   SECCIÓN VERDE — TEXTO + FONDO CON ZANAHORIAS
+============================================================ */
+
 .veggie-section {
     background-color: #1E5A33;
-    padding: 70px 20px; /* MENOS aire arriba y abajo */
+    padding: 60px 20px;                /* antes: 140 → menos aire */
     position: relative;
     overflow: hidden;
+
+    /* Fondo de zanahorias repetido */
+    background-image: url("../images/zanahoria-verde.png");
+    background-repeat: repeat;
+    background-size: 300px;            /* más pequeño → más zanahorias */
+    background-position: center;
 }
 
-/* Capa suave para que no distraiga */
+/* Capa de suavizado */
 .veggie-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(30, 90, 51, 0.55);
-    z-index: 1;
+    background: rgba(30, 90, 51, 0.45); /* suaviza pero mantiene visibles */
     pointer-events: none;
 }
 
-/* FIGURAS — Zanahorias individuales */
-.veggie-shape {
-    position: absolute;
-    opacity: 0;
-    width: 260px;
-    height: 260px;
-
-    background-image: url("assets/images/zanahoria-verde.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    transform: translateY(40px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-
-    z-index: 2; /* detrás del texto */
-}
-
-/* Activación */
-.veggie-shape.visible {
-    opacity: 0.28;
-    transform: translateY(0) rotate(var(--rot, 0deg));
-}
-
-/* Distribución equilibrada */
-.veggie-shape:nth-child(1) { width:180px; height:320px; top:5%; left:8%; }
-.veggie-shape:nth-child(2) { width:140px; height:260px; top:25%; left:25%; }
-.veggie-shape:nth-child(3) { width:200px; height:340px; top:60%; left:10%; }
-
-.veggie-shape:nth-child(4) { width:180px; height:320px; top:10%; right:10%; }
-.veggie-shape:nth-child(5) { width:150px; height:280px; top:40%; right:22%; }
-.veggie-shape:nth-child(6) { width:200px; height:350px; top:70%; right:12%; }
-
-.veggie-shape:nth-child(7) { width:220px; height:360px; top:35%; left:48%; }
-
-/* Texto de la sección verde */
+/* TEXTO */
 .veggie-text {
-    position: relative;
-    z-index: 5;
-    width: 90%;
-    max-width: 1800px;
-    margin: 0 auto;
-    color: #FFF6E7;
     font-family: 'Lilita One', sans-serif;
+    color: #fff6e7;
     text-align: justify;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     font-size: clamp(1.8rem, 3vw, 3rem);
     line-height: 1.35;
+    position: relative;
+    z-index: 10;
 }
 
-/* Botón */
+/* BOTÓN */
+.next-logo {
+    margin-top: 50px; /* más compacto */
+}
+
 .next-logo img {
     width: 120px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    z-index: 15;
+    position: relative;
 }
 
-.next-logo img:hover {
-    transform: scale(1.15);
-}
 
 /* ============================================================
    SECCIÓN NARANJA EDITORIAL
