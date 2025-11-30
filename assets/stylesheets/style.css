@@ -26,18 +26,19 @@ body {
 
 .title-massive {
     font-family: 'Lilita One', sans-serif;
-    font-size: 8vw;     /* 🔥 MÁS PEQUEÑO PERO IGUAL DE IMPACTANTE */
+    font-size: 7vw;      
     white-space: nowrap;
     color: #E6A93A;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
+    gap: 3vw;
     margin: 0;
+    letter-spacing: 1.5vw;   /* 🔥 equivalente visual a 1.5cm */
 }
 
 .title-icon {
-    width: 8vw;     /* 🔥 MISMO ALTO PROPORCIONAL QUE EL TEXTO */
+    width: 11vw;     /* 🔥 AGRANDADO */
     height: auto;
 }
 
@@ -46,53 +47,71 @@ body {
 .sticker-zone {
     position: relative;
     margin-top: 40px;
-    height: 420px; /* 🔥 Cubren toda la pantalla */
+    height: 500px; 
 }
 
-/* GLOBO OVALADO */
+/* GLOBO OVALADO CON COLA */
 .sticker {
     position: absolute;
     width: 330px;
     padding: 22px 28px;
-    font-size: 15px;
-    font-weight: 800;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 900;
     text-transform: uppercase;
     line-height: 1.3;
     color: #111;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+
+    /* sombra */
     box-shadow: 0 8px 15px rgba(0,0,0,0.25);
-    z-index: 3;
+
+    /* animación */
     animation: popIn 0.6s ease-out forwards;
-    transform: scale(0);
+    opacity: 0;
+    transform: scale(0) rotate(-8deg);
+
+    /* cola del globo */
+    position: absolute;
+}
+
+.sticker::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 12px 0 12px;
+    border-style: solid;
+    border-color: inherit transparent transparent transparent;
 }
 
 /* COLORES */
-.pink { background-color: #FF70C2; }
-.green { background-color: #B6FFA8; }
-
-/* DISTRIBUCIÓN EQUILIBRADA Y DESORDENADA */
-.sticker:nth-child(1) { top: 20px; left: 4%; transform: rotate(-4deg) scale(0); }
-.sticker:nth-child(2) { top: 80px; left: 30%; transform: rotate(3deg) scale(0); }
-.sticker:nth-child(3) { top: 10px; left: 60%; transform: rotate(-2deg) scale(0); }
-.sticker:nth-child(4) { top: 160px; left: 10%; transform: rotate(5deg) scale(0); }
-.sticker:nth-child(5) { top: 200px; left: 55%; transform: rotate(-3deg) scale(0); }
-.sticker:nth-child(6) { top: 120px; left: 75%; transform: rotate(4deg) scale(0); }
-.sticker:nth-child(7) { top: 260px; left: 25%; transform: rotate(-5deg) scale(0); }
-.sticker:nth-child(8) { top: 300px; left: 65%; transform: rotate(6deg) scale(0); }
+.pink { background-color: #FF70C2; border-color: #FF70C2; }
+.green { background-color: #B6FFA8; border-color: #B6FFA8; }
 
 /* ================= ANIMACIÓN POP ================= */
 
 @keyframes popIn {
     0% { transform: scale(0) rotate(-8deg); opacity: 0; }
     60% { transform: scale(1.1) rotate(0deg); opacity: 1; }
-    100% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
 }
 
-/* ================= BARRA DE BÚSQUEDA ================= */
+/* ================= POSICIONES (DESORDEN LÓGICO) ================= */
+
+.sticker:nth-child(1) { top: 10px; left: 5%; transform: rotate(-4deg) scale(0); }
+.sticker:nth-child(2) { top: 80px; left: 30%; transform: rotate(3deg) scale(0); }
+.sticker:nth-child(3) { top: 20px; left: 60%; transform: rotate(-6deg) scale(0); }
+.sticker:nth-child(4) { top: 140px; left: 10%; transform: rotate(2deg) scale(0); }
+.sticker:nth-child(5) { top: 200px; left: 55%; transform: rotate(-3deg) scale(0); }
+.sticker:nth-child(6) { top: 120px; left: 75%; transform: rotate(4deg) scale(0); }
+.sticker:nth-child(7) { top: 260px; left: 20%; transform: rotate(-5deg) scale(0); }
+.sticker:nth-child(8) { top: 300px; left: 65%; transform: rotate(6deg) scale(0); }
+.sticker:nth-child(9) { top: 350px; left: 40%; transform: rotate(-2deg) scale(0); }
+.sticker:nth-child(10) { top: 180px; left: 0%; transform: rotate(3deg) scale(0); }
+
+/* ================= SEARCH BAR ================= */
 
 .search-wrapper {
     margin-top: 80px;
@@ -103,7 +122,7 @@ body {
 }
 
 .search-wrapper input {
-    width: 90%;
+    width: 100%;
     padding: 20px;
     border-radius: 40px;
     background: #f1f1f1;
@@ -114,7 +133,7 @@ body {
 
 .search-btn {
     position: absolute;
-    right: 7%;
+    right: 3%;
     top: 11px;
     height: 50px;
     width: 50px;
@@ -134,6 +153,7 @@ body {
     text-align: center;
     font-size: 2rem;
 }
+
 
 
 
