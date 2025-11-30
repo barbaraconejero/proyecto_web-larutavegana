@@ -1,4 +1,6 @@
-/* ================= GENERAL ================= */
+/* ============================================================
+   ESTILOS GENERALES
+============================================================ */
 
 body {
     margin: 0;
@@ -8,7 +10,10 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= HERO ================= */
+
+/* ============================================================
+   HEADER HERO
+============================================================ */
 
 .hero {
     padding: 50px 20px 90px;
@@ -17,13 +22,16 @@ body {
     position: relative;
 }
 
-/* ================= TÍTULO ================= */
+
+/* ============================================================
+   TÍTULO PRINCIPAL
+============================================================ */
 
 .title-container,
 .title-massive,
 .title-icon {
     position: relative;
-    z-index: 10; /* Siempre arriba */
+    z-index: 10;
 }
 
 .title-container {
@@ -49,54 +57,44 @@ body {
     filter: hue-rotate(-20deg) brightness(1.4) saturate(1.4);
 }
 
+
 /* ============================================================
-   MAZO DE TARJETAS ENTRE TÍTULO Y SEARCH BAR
-   ============================================================ */
+   MAZO DE TARJETAS
+============================================================ */
 
 .sticker-deck {
     width: 100%;
-    height: auto;          /* ← 🔥 altura real del mazo */
-    padding: 90px 0;       /* ← 🔥 espacio entre título y search */
-    position: relative;
+    padding: 90px 0;
     margin-top: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-/* ====================== 
-   BASE — OVALO COMPACTO PARA TODOS
-====================== */
+/* Base */
 .sticker {
     width: 260px;
     height: 180px;
     padding: 0 18px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
     font-size: 16px;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.2;
-
-    cursor: pointer;
     position: absolute;
+    cursor: pointer;
 
-    top: 50%;              /* ← posición absoluta correcta */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
 
     border-radius: 50% / 40%;
     transition: transform 0.35s, box-shadow 0.35s;
 }
-
-/* ======================
-   POSICIONES EN EL MAZO
-======================== */
 
 .sticker.center {
     transform: translate(-50%, -50%) scale(1.1) rotate(0deg);
@@ -113,49 +111,50 @@ body {
     z-index: 10;
 }
 
-/* HOVER */
 .sticker:hover {
     transform: scale(1.15) rotate(0deg);
     box-shadow: 0 12px 18px rgba(0,0,0,0.35);
     z-index: 20;
 }
 
-/* ================== FORMAS ================== */
 
-/* 🍋 AMARILLO */
+/* ============================================================
+   ESTILOS DE LOS STICKERS
+============================================================ */
+
 .lemon {
     background-color: #FFEB3B;
     border: 4px solid #2E7D32;
     color: #2E7D32;
 }
 
-/* 🔵 CELESTE */
 .banana {
     background-color: #039BE5;
     border: 4px solid #FDD835;
     color: white;
 }
 
-/* 🟢 VERDE */
 .burst {
     background-color: #004D40;
     border: 4px dashed #4DB6AC;
     color: white;
 }
 
-/* ⬜ RECTÁNGULO BLANCO */
 .eco {
     width: 280px;
-    height: auto;
-    min-height: 120px;
     padding: 22px 30px;
+    min-height: 120px;
+    height: auto;
     border-radius: 28px;
     background: white;
     border: 4px solid #C62828;
     color: #0D47A1;
 }
 
-/* ================= SEARCH BAR ================= */
+
+/* ============================================================
+   SEARCH BAR
+============================================================ */
 
 .search-wrapper {
     margin-top: 80px;
@@ -183,44 +182,246 @@ body {
     top: 11px;
     height: 52px;
     width: 52px;
-    border: none;
     background: #ffdd55;
     border-radius: 50%;
     font-size: 22px;
+    border: none;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ================= NEXT SECTION ================= */
 
-.next-section {
-    background: #F9F9F9;
-    padding: 150px 40px;
-    text-align: center;
-    font-size: 2rem;
-}
-
-/* ================= SECCIÓN EDITORIAL ================= */
+/* ============================================================
+   SECCIÓN INTRO EDITORIAL (AMARILLA)
+============================================================ */
 
 .intro-section {
     background: #FFF6E7;
-    padding: 90px 20px;   /* ← antes 140px */
+    padding: 90px 20px;
     text-align: center;
 }
-
 
 .intro-text {
     font-family: 'Lilita One', sans-serif;
     color: #ffb347;
-    
-    font-size: clamp(3.2rem, 7vw, 5rem);  /* 🔥 más grande */
-    
-    text-align: center;
-    max-width: 1400px;                   /* 🔥 permite mayor anchura */
-    
+    font-size: clamp(3.2rem, 7vw, 5rem);
+    max-width: 1400px;
     margin: 0 auto;
-    line-height: 1.1;                    /* más compacto para ocupar pantalla */
-    text-transform: none;
+    line-height: 1.1;
+}
+
+
+/* ============================================================
+   SECCIÓN VERDURAS + TEXTO
+============================================================ */
+
+.veggie-section {
+    background: #1E5A33;
+    padding: 140px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.veggie-text {
+    font-family: 'Lilita One', sans-serif;
+    color: #fff6e7;
+    text-align: justify;
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.35;
+    position: relative;
+    z-index: 10;
+}
+
+/* Figuras base */
+.veggie-shape {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1.2s ease-out;
+}
+
+.veggie-shape.visible {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rot, 0deg));
+}
+
+/* ============================================================
+   FIGURAS INDIVIDUALES (DUPLICADAS)
+============================================================ */
+
+.ajic {
+    width: 150px;
+    height: 150px;
+    background: #cc1f1f;
+    top: 12%;
+    left: 5%;
+    clip-path: polygon(20% 8%, 40% 0%, 65% 10%, 85% 35%, 80% 70%, 55% 95%, 30% 85%, 15% 60%);
+}
+
+.ajic:nth-of-type(2) {
+    top: 70%;
+    left: 20%;
+    transform: scale(0.8);
+}
+
+.zanahoria {
+    width: 120px;
+    height: 250px;
+    background: #f47f1f;
+    bottom: 8%;
+    left: 10%;
+    clip-path: polygon(40% 0%, 55% 20%, 65% 40%, 70% 60%, 60% 100%, 35% 100%, 25% 60%, 30% 30%);
+}
+
+.zanahoria:nth-of-type(2) {
+    top: 50%;
+    left: 75%;
+    transform: scale(0.7);
+}
+
+.limon {
+    width: 260px;
+    height: 160px;
+    background: #f4c430;
+    top: 15%;
+    right: 10%;
+    clip-path: ellipse(48% 40% at 50% 50%);
+}
+
+.limon:nth-of-type(2) {
+    top: 65%;
+    right: 18%;
+    transform: scale(0.7);
+}
+
+.pepino {
+    width: 220px;
+    height: 100px;
+    background: #2b8f65;
+    top: 60%;
+    right: 5%;
+    border-radius: 40px;
+}
+
+.pepino:nth-of-type(2) {
+    top: 25%;
+    left: 60%;
+    transform: scale(0.8);
+}
+
+.apio {
+    width: 260px;
+    height: 70px;
+    background: #7fd65f;
+    bottom: 10%;
+    right: 15%;
+    clip-path: polygon(5% 20%, 35% 10%, 65% 15%, 95% 5%, 100% 40%, 70% 60%, 45% 70%, 10% 50%);
+}
+
+.apio:nth-of-type(2) {
+    top: 40%;
+    left: 30%;
+    transform: scale(0.9);
+}
+
+.tomate {
+    width: 260px;
+    height: 200px;
+    background: #d62828;
+    top: 55%;
+    left: 28%;
+    clip-path: polygon(10% 40%, 25% 20%, 45% 10%, 65% 10%, 85% 30%, 90% 55%, 75% 80%, 45% 90%, 20% 70%);
+}
+
+.tomate:nth-of-type(2) {
+    top: 10%;
+    left: 40%;
+    transform: scale(0.8);
+}
+
+.pimenton {
+    width: 200px;
+    height: 200px;
+    background: #e63946;
+    top: 25%;
+    left: 70%;
+    clip-path: polygon(30% 0%, 60% 10%, 85% 40%, 85% 70%, 60% 100%, 30% 90%, 10% 60%, 10% 30%);
+}
+
+.pimenton:nth-of-type(2) {
+    top: 70%;
+    left: 60%;
+    transform: scale(0.8);
+}
+
+
+/* ============================================================
+   BOTÓN ZANAHORIA PARA SCROLLEAR
+============================================================ */
+
+.next-logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 20;
+}
+
+.next-logo img {
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.next-logo img:hover {
+    transform: scale(1.15);
+}
+
+
+/* ============================================================
+   SECCIÓN EDITORIAL NARANJA
+============================================================ */
+
+.seccion-naranja {
+    background: #ffb347;
+    padding: 120px 0 160px;
+    color: #fff6e7;
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Título */
+.naranja-title {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: justify;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+}
+
+/* Subtítulo */
+.naranja-subtitle {
+    font-size: clamp(1.6rem, 3vw, 2.8rem);
+    font-weight: 600;
+    max-width: 1400px;
+    text-align: justify;
+    margin: 0 auto 60px auto;
+}
+
+/* Cuerpo de texto */
+.naranja-text {
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 2cm;
+    padding-right: 2cm;
 }
 
 
