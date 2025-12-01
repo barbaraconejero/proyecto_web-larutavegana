@@ -475,6 +475,17 @@ body {
     margin: 0 auto;
 }
 
+.flourish-map-box {
+    width: 100%;
+    max-width: 1400px;     /* mismo ancho editorial del texto */
+    margin: 60px auto;     /* separaciones arriba y abajo */
+    text-align: center;
+}
+
+.flourish-embed {
+    width: 100%;
+}
+
 
 
 
