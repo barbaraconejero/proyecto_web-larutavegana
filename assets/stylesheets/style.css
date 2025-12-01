@@ -309,6 +309,171 @@ body {
     line-height: 1.5;
     text-align: justify;
 }
+/* ============================================================
+   SECCIÓN BEIGE EDITORIAL (TRIPADVISOR)
+============================================================ */
+
+.beige-section {
+    background: #FFF6E7;               /* mismo beige claro */
+    padding: 90px 20px;                /* igual que sección 2 */
+    text-align: center;
+}
+
+.beige-container {
+    width: 90%;
+    max-width: 1400px;                 /* igual que sección intro */
+    margin: 0 auto;
+}
+
+.beige-text {
+    font-family: 'Lilita One', sans-serif;
+    color: #1E5A33;                    /* mismo verde de la sección 1 */
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0 auto;
+    text-align: justify;               /* 🔥 TEXTO JUSTIFICADO */
+
+ 
+}
+.beige-text::first-letter {
+    text-transform: uppercase;
+}
+/* ============================================================
+   SECCIÓN BEIGE (MISMO ESTILO QUE LA SECCIÓN 2)
+============================================================ */
+
+.beige-section {
+    background: #FFF6E7; /* mismo beige */
+    padding: 120px 20px;
+}
+
+.beige-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* TEXTO PRINCIPAL */
+.beige-text {
+    font-family: 'Lilita One', sans-serif;
+    color: #1E5A33; /* verde sección 1 */
+    font-size: clamp(1.9rem, 4.2vw, 3rem); 
+    line-height: 1.3;
+    text-align: justify;
+    margin-bottom: 60px;
+}
+
+/* =============================
+   MAPA DE FLOURISH
+============================= */
+
+.flourish-map-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.flourish-map-box .flourish-embed {
+    width: 100%;
+    min-height: 600px; 
+}
+
+/* DESCRIPCIÓN DEL MAPA */
+.map-description {
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    color: #1E5A33;
+    text-align: justify;
+    line-height: 1.5;
+    max-width: 1200px;
+    margin: 20px auto 80px auto;
+}
+
+/* =============================
+   INTRO TEXTO ANTES DEL GRÁFICO FINAL
+============================= */
+.beige-intro-graph {
+    font-family: 'Figtree', sans-serif;
+    color: #1E5A33;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* =============================
+   GRÁFICO FINAL
+============================= */
+.final-chart-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.final-chart {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.final-chart-description {
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    color: #1E5A33;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   SECCIÓN ROSA — RANKEO VEGANO
+============================================================ */
+
+.pink-section {
+    background: #ff99dd;
+    padding: 120px 20px;
+    color: #1E5A33; /* verde de las primeras secciones */
+    font-family: 'Figtree', sans-serif;
+}
+
+.pink-container {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.pink-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    text-align: justify;
+    line-height: 1.35;
+    margin-bottom: 50px;
+}
+
+.pink-body {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    padding-left: 0; /* si quieres el margen como sección naranja, avísame */
+}
+
+.pink-chart-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.pink-chart-image {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 14px;
+    display: block;
+    margin: 0 auto;
+}
 
 
 
