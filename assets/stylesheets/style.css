@@ -430,20 +430,20 @@ body {
    SECCIÓN ROSA — RANKEO VEGANO
 ============================================================ */
 
-.pink-section {
-    background: #ff99dd;
+.green-section {
+    background: #143B24;
     padding: 120px 20px;
-    color: #1E5A33; /* verde de las primeras secciones */
+    color: #ffb347; 
     font-family: 'Figtree', sans-serif;
 }
 
-.pink-container {
+.green-container {
     width: 90%;
     max-width: 1800px;
     margin: 0 auto;
 }
 
-.pink-title {
+.green-title {
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 800;
     text-align: justify;
@@ -451,7 +451,7 @@ body {
     margin-bottom: 50px;
 }
 
-.pink-body {
+.green-body {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: 400;
     text-align: justify;
