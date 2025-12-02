@@ -10,6 +10,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /* ============================================================
    HEADER HERO
 ============================================================ */
@@ -21,21 +22,14 @@ body {
     position: relative;
 }
 
+
 /* ============================================================
    TÍTULO PRINCIPAL
 ============================================================ */
 
-.title-container,
-.title-massive,
-.title-icon {
-    position: relative;
-    z-index: 10;
-}
-
 .title-container {
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .title-massive {
@@ -55,6 +49,7 @@ body {
     filter: hue-rotate(-20deg) brightness(1.4) saturate(1.4);
 }
 
+
 /* ============================================================
    MAZO DE TARJETAS
 ============================================================ */
@@ -62,10 +57,8 @@ body {
 .sticker-deck {
     width: 100%;
     padding: 90px 0;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
 }
 
@@ -81,13 +74,13 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.2;
-
     cursor: pointer;
+
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
 
+    transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
     border-radius: 50% / 40%;
     transition: transform 0.35s, box-shadow 0.35s;
 }
@@ -98,22 +91,23 @@ body {
 
 .sticker:hover {
     transform: scale(1.15) rotate(0deg);
-    box-shadow: 0 12px 18px rgba(0,0,0,0.35);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Stickers colores */
-.lemon { background:#FFEB3B; border:4px solid #2E7D32; color:#2E7D32; }
-.banana { background:#039BE5; border:4px solid #FDD835; color:white; }
-.burst { background:#004D40; border:4px dashed #4DB6AC; color:white; }
+/* Colores */
+.lemon { background: #FFEB3B; border: 4px solid #2E7D32; color: #2E7D32; }
+.banana { background: #039BE5; border: 4px solid #FDD835; color: white; }
+.burst { background: #004D40; border: 4px dashed #4DB6AC; color: white; }
 .eco {
     width: 280px;
     min-height: 120px;
     padding: 22px 30px;
-    background:white;
-    border:4px solid #C62828;
+    background: white;
+    border: 4px solid #C62828;
     border-radius: 28px;
-    color:#0D47A1;
+    color: #0D47A1;
 }
+
 
 /* ============================================================
    SEARCH BAR
@@ -125,7 +119,6 @@ body {
     max-width: 1500px;
     margin-inline: auto;
     position: relative;
-    z-index: 5;
 }
 
 .search-wrapper input {
@@ -152,8 +145,9 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+
 /* ============================================================
-   SECCIÓN INTRO (AMARILLA)
+   SECCIÓN INTRO AMARILLA
 ============================================================ */
 
 .intro-section {
@@ -171,8 +165,9 @@ body {
     line-height: 1.1;
 }
 
+
 /* ============================================================
-   SECCIÓN VERDE — TEXTO + FONDO ZANAHORIAS
+   SECCIÓN VERDE — ZANAHORIAS
 ============================================================ */
 
 .veggie-section {
@@ -191,8 +186,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(30,90,51,0.45);
-    pointer-events: none;
+    background: rgba(30, 90, 51, 0.45);
 }
 
 .veggie-text {
@@ -207,6 +201,7 @@ body {
     position: relative;
     z-index: 10;
 }
+
 
 /* ============================================================
    SECCIÓN NARANJA EDITORIAL
@@ -228,7 +223,6 @@ body {
 .orange-title {
     font-size: clamp(3rem, 7vw, 6rem);
     font-weight: 800;
-    line-height: 1.1;
     text-align: justify;
     margin-bottom: 40px;
 }
@@ -246,36 +240,29 @@ body {
     margin-bottom: 40px;
 }
 
-/* ============================================================
-   GRÁFICO EDITORIAL
-============================================================ */
-
 .chart-wrapper {
     width: 100%;
     max-width: 1400px;
-    margin: 80px auto 0 auto;
+    margin: 80px auto 0;
     padding-inline: 2cm;
-    text-align: center;
 }
 
 .chart-image {
     width: 100%;
     max-width: 1100px;
     border-radius: 12px;
-    display: block;
-    margin: 0 auto;
 }
 
 .chart-description {
-    color: #fff6e7;
-    margin-top: 20px;
     font-size: clamp(1rem, 1.4vw, 1.4rem);
-    line-height: 1.5;
+    color: #fff6e7;
     text-align: justify;
+    margin-top: 20px;
 }
 
+
 /* ============================================================
-   SECCIÓN BEIGE (TRIPADVISOR)
+   SECCIÓN BEIGE (MAPA + GRÁFICO)
 ============================================================ */
 
 .beige-section {
@@ -297,15 +284,73 @@ body {
     margin-bottom: 60px;
 }
 
+
+/* MAPA FLOURISH */
+
+.flourish-map-box {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.flourish-embed {
+    width: 100% !important;
+    min-height: 600px;
+}
+
+.map-description {
+    color: #1E5A33;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    text-align: justify;
+    margin: 20px auto 60px;
+    line-height: 1.5;
+    max-width: 1200px;
+}
+
+.beige-intro-graph {
+    font-family: 'Figtree', sans-serif;
+    color: #1E5A33;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+
+/* GRÁFICO FINAL */
+
+.final-chart-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.final-chart {
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.final-chart-description {
+    color: #1E5A33;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+
 /* ============================================================
-   SECCIÓN VERDE OSCURO FINAL — TEXTO NARANJA
+   SECCIÓN FINAL VERDE OSCURO — TEXTO NARANJA
 ============================================================ */
 
 .green-section {
     background: #143B24;
     padding: 120px 20px;
-    color: #ffb347; /* 🔥 EL COLOR QUE PEDISTE */
     font-family: 'Figtree', sans-serif;
+    color: #ffb347;
 }
 
 .green-container {
@@ -318,25 +363,22 @@ body {
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 800;
     text-align: justify;
-    line-height: 1.35;
     margin-bottom: 50px;
-    color: #ffb347; /* asegurado */
+    color: #ffb347;
 }
 
 .green-body {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
-    font-weight: 400;
-    text-align: justify;
     line-height: 1.6;
+    text-align: justify;
     margin-bottom: 50px;
-    color: #ffb347; /* asegurado */
+    color: #ffb347;
 }
 
 .pink-chart-wrapper {
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto 60px auto;
-    text-align: center;
+    margin: 0 auto 60px;
 }
 
 .pink-chart-image {
@@ -346,6 +388,7 @@ body {
     display: block;
     margin: 0 auto;
 }
+
 
 
 
