@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +15,7 @@
 <body>
 
 <!-- ============================================================
-   HERO PRINCIPAL (TÍTULO + TARJETAS + SEARCH)
+   HERO PRINCIPAL
 ============================================================ -->
 <header class="hero">
 
@@ -28,7 +27,6 @@
         </h1>
     </div>
 
-    <!-- MAZO DE TARJETAS -->
     <div class="sticker-deck">
         <div class="sticker lemon">NO SÉ DÓNDE HAY BUENOS RESTAURANTES VEGANOS EN SANTIAGO.</div>
         <div class="sticker banana">NO HAY OFERTA GASTRONÓMICA VEGANA EN LA CAPITAL.</div>
@@ -38,7 +36,6 @@
         <div class="sticker lemon">QUIERO IR A LOS LUGARES VEGANOS MEJOR RANKEADOS.</div>
     </div>
 
-    <!-- SEARCH BAR -->
     <div class="search-wrapper">
         <input id="search-blocked" type="text" placeholder="" disabled>
         <button class="search-btn" onclick="scrollToNextSection()">🔍</button>
@@ -58,11 +55,10 @@
 
 
 <!-- ============================================================
-   SECCIÓN 2 — VERDE (ZANAHORIAS + TEXTO)
+   SECCIÓN 2 — VERDE
 ============================================================ -->
 <section class="veggie-section" id="veggie-intro">
 
-    <!-- ZANAHORIAS DE FONDO (FIGURAS INDIVIDUALES) -->
     <div class="veggie-shape"></div>
     <div class="veggie-shape"></div>
     <div class="veggie-shape"></div>
@@ -71,7 +67,6 @@
     <div class="veggie-shape"></div>
     <div class="veggie-shape"></div>
 
-    <!-- TEXTO PRINCIPAL -->
     <div class="veggie-text">
         <p>
             Y aunque todavía hay quienes dicen que lo vegano es “aburrido”, “caro” o “para unos pocos”, 
@@ -110,7 +105,6 @@
             el veganismo dejó de ser una tendencia pasajera para convertirse en un ecosistema que crece, se diversifica y se afirma.
         </p>
 
-        <!-- GRÁFICO -->
         <div class="chart-wrapper">
             <img src="assets/images/mi-grafico.png" 
                  alt="Gráfico editorial" 
@@ -127,50 +121,45 @@
 
 
 <!-- ============================================================
-   SECCIÓN BEIGE — TEXTO + MAPA + TEXTO + GRÁFICO
+   SECCIÓN BEIGE — MAPA + GRÁFICO
 ============================================================ -->
 <section id="seccion-mapa" class="beige-section">
 
     <div class="beige-container">
 
-        <!-- TEXTO PRINCIPAL EDITORIAL -->
         <p class="beige-text">
             Y así como las marcas veganas fueron tomando fuerza en el mercado chileno, Tripadvisor también fue testigo de ello. 
             El sitio web favorito para buscar restaurantes hoy cuenta con 165 restaurantes, cafeterías y bares veganos en Santiago.
         </p>
 
         <div class="flourish-map-box">
+            <div class="flourish-embed flourish-map" data-src="visualisation/26480041">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/26480041/thumbnail" 
+                         width="100%" 
+                         alt="map visualization" />
+                </noscript>
+            </div>
+        </div>
 
-    <div class="flourish-embed flourish-map" data-src="visualisation/26480041">
-        <script src="https://public.flourish.studio/resources/embed.js"></script>
-        <noscript>
-            <img src="https://public.flourish.studio/visualisation/26480041/thumbnail" 
-                 width="100%" 
-                 alt="map visualization" />
-        </noscript>
-    </div>
-
-</div>
-
-
-        <!-- DESCRIPCIÓN DEL MAPA -->
         <p class="map-description">
             (Aquí va la descripción del mapa que explica distribución, patrones o lo que interpretaste).
         </p>
 
-        <!-- INTRO AL GRÁFICO FINAL -->
         <p class="beige-intro-graph">
             (Aquí va tu introducción narrativa al gráfico final).
         </p>
 
-        <!-- GRÁFICO FINAL -->
         <div class="final-chart-box">
-            <img src="assets/images/grafico-final.png" 
-                 alt="Gráfico final" 
+            <img src="/Users/barbaraconejero/Documents/GitHub/proyecto_web-larutavegana/assets/images/oferta-comunas.png" 
+                 alt="Oferta Comunas" 
                  class="final-chart">
 
             <p class="final-chart-description">
-                (Aquí va la descripción del gráfico final)
+                Pasear por el eje Alameda-Providencia es, para un vegano, lo más cercano a estar en Londres o Berlín, capitales veganas del mundo.
+              Santiago Centro, Providencia, Las Condes y Vitacura forman el cuadrante donde el veganismo encontró su terreno más fértil. No es casualidad: mayor flujo, más comercio, más diversidad cultural y una clientela dispuesta a probar sabores nuevos.
+              Pero la capital todavía guarda sorpresas. Porque ser vegano, como ya dijimos, también es ser explorador culinario el mapa verde te guía a lugares inesperados y Recoleta es uno de ellos. Aunque no suele figurar en los rankings gastronómicos tradicionales , la comuna se ha convertido en la cuna de la cocina coreana en Santiago, un cruce cultural donde abundan preparaciones que, sin declararse veganas, integran verduras, tofu, fermentos y sabores que dialogan con quienes buscan alternativas sin carne. Un punto inesperado de encuentro entre la tradición asiática y la demanda plant-based local.
             </p>
         </div>
 
@@ -181,19 +170,19 @@
 
 
 <!-- ============================================================
-   SECCIÓN ROSADA — RANKING FINAL
+   SECCIÓN FINAL — TEXTO NARANJA SOBRE VERDE OSCURO
 ============================================================ -->
-<section id="seccion-ranking" class="pink-section">
+<section id="seccion-ranking" class="green-section">
 
-    <div class="pink-container">
+    <div class="green-container">
 
-        <h2 class="pink-title">
+        <h2 class="green-title">
             Entre una diversidad de opciones, elegir se vuelve un desafío. 
             Pero quienes ya visitaron estos lugares dejaron una pista clara: sus calificaciones.
-            Ahora te toca a ti descubrir ¿qué tan bien sabe lo vegano en Santiago?
+            Ahora te toca a ti descubrir: ¿qué tan bien sabe lo vegano en Santiago?
         </h2>
 
-        <p class="pink-body">
+        <p class="green-body">
             Tripadvisor, la plataforma de reseñas gastronómicas, registra 3.950 restaurantes en Santiago.
             De ellos, solo 152 son veganos, vegetarianos o con opciones veganas: menos del 4% del total.
         </p>
@@ -204,7 +193,7 @@
                  class="pink-chart-image">
         </div>
 
-        <p class="pink-body">
+        <p class="green-body">
             Aun así, la mayoría se concentra dentro de los primeros 800 puestos del ranking general
             y varios superan el puesto 500, ubicándose dentro del 20% superior de la oferta gastronómica capitalina.
         </p>
@@ -215,9 +204,6 @@
 
 
 
-<!-- ============================================================
-   JS
-============================================================ -->
 <script src="assets/javascripts/javascript1.js"></script>
 
 </body>

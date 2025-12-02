@@ -86,35 +86,22 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
 
     border-radius: 50% / 40%;
     transition: transform 0.35s, box-shadow 0.35s;
 }
 
-.sticker.center {
-    transform: translate(-50%, -50%) scale(1.1) rotate(0deg);
-    z-index: 20;
-}
-
-.sticker.left {
-    transform: translate(calc(-50% - 220px), -50%) rotate(-8deg);
-    z-index: 10;
-}
-
-.sticker.right {
-    transform: translate(calc(-50% + 220px), -50%) rotate(8deg);
-    z-index: 10;
-}
+.sticker.center { transform: translate(-50%, -50%) scale(1.1); z-index: 20; }
+.sticker.left { transform: translate(calc(-50% - 220px), -50%) rotate(-8deg); }
+.sticker.right { transform: translate(calc(-50% + 220px), -50%) rotate(8deg); }
 
 .sticker:hover {
     transform: scale(1.15) rotate(0deg);
     box-shadow: 0 12px 18px rgba(0,0,0,0.35);
-    z-index: 20;
 }
 
-/* Colores */
+/* Stickers colores */
 .lemon { background:#FFEB3B; border:4px solid #2E7D32; color:#2E7D32; }
 .banana { background:#039BE5; border:4px solid #FDD835; color:white; }
 .burst { background:#004D40; border:4px dashed #4DB6AC; color:white; }
@@ -136,8 +123,7 @@ body {
     margin-top: 80px;
     width: 90%;
     max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     position: relative;
     z-index: 5;
 }
@@ -186,36 +172,29 @@ body {
 }
 
 /* ============================================================
-   SECCIÓN VERDE — ZANAHORIAS + TEXTO
-============================================================ */
-
-/* ============================================================
-   SECCIÓN VERDE — TEXTO + FONDO CON ZANAHORIAS
+   SECCIÓN VERDE — TEXTO + FONDO ZANAHORIAS
 ============================================================ */
 
 .veggie-section {
     background-color: #1E5A33;
-    padding: 35px 20px 50px;                /* antes: 140 → menos aire */
+    padding: 35px 20px 50px;
     position: relative;
     overflow: hidden;
 
-    /* Fondo de zanahorias repetido */
     background-image: url("../images/zanahoria-verde.png");
     background-repeat: repeat;
-    background-size: 300px;            /* más pequeño → más zanahorias */
+    background-size: 300px;
     background-position: center;
 }
 
-/* Capa de suavizado */
 .veggie-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(30, 90, 51, 0.45); /* suaviza pero mantiene visibles */
+    background: rgba(30,90,51,0.45);
     pointer-events: none;
 }
 
-/* TEXTO */
 .veggie-text {
     font-family: 'Lilita One', sans-serif;
     color: #fff6e7;
@@ -229,27 +208,13 @@ body {
     z-index: 10;
 }
 
-/* BOTÓN */
-.next-logo {
-    margin-top: 50px; /* más compacto */
-}
-
-.next-logo img {
-    width: 120px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    z-index: 15;
-    position: relative;
-}
-
-
 /* ============================================================
    SECCIÓN NARANJA EDITORIAL
 ============================================================ */
 
 .orange-section {
     background: #ffb347;
-    padding: 60px 20px 120px; /* MENOS aire arriba */
+    padding: 60px 20px 120px;
     color: #fff6e7;
     font-family: 'Figtree', sans-serif;
 }
@@ -289,61 +254,32 @@ body {
     width: 100%;
     max-width: 1400px;
     margin: 80px auto 0 auto;
-    padding-left: 2cm;
-    padding-right: 2cm;
+    padding-inline: 2cm;
     text-align: center;
 }
 
 .chart-image {
     width: 100%;
     max-width: 1100px;
+    border-radius: 12px;
     display: block;
     margin: 0 auto;
-    border-radius: 12px;
 }
 
 .chart-description {
-    margin-top: 20px;
     color: #fff6e7;
+    margin-top: 20px;
     font-size: clamp(1rem, 1.4vw, 1.4rem);
     line-height: 1.5;
     text-align: justify;
 }
+
 /* ============================================================
-   SECCIÓN BEIGE EDITORIAL (TRIPADVISOR)
+   SECCIÓN BEIGE (TRIPADVISOR)
 ============================================================ */
 
 .beige-section {
-    background: #FFF6E7;               /* mismo beige claro */
-    padding: 90px 20px;                /* igual que sección 2 */
-    text-align: center;
-}
-
-.beige-container {
-    width: 90%;
-    max-width: 1400px;                 /* igual que sección intro */
-    margin: 0 auto;
-}
-
-.beige-text {
-    font-family: 'Lilita One', sans-serif;
-    color: #1E5A33;                    /* mismo verde de la sección 1 */
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
-    line-height: 1.1;
-    margin: 0 auto;
-    text-align: justify;               /* 🔥 TEXTO JUSTIFICADO */
-
- 
-}
-.beige-text::first-letter {
-    text-transform: uppercase;
-}
-/* ============================================================
-   SECCIÓN BEIGE (MISMO ESTILO QUE LA SECCIÓN 2)
-============================================================ */
-
-.beige-section {
-    background: #FFF6E7; /* mismo beige */
+    background: #FFF6E7;
     padding: 120px 20px;
 }
 
@@ -353,87 +289,22 @@ body {
     margin: 0 auto;
 }
 
-/* TEXTO PRINCIPAL */
 .beige-text {
     font-family: 'Lilita One', sans-serif;
-    color: #1E5A33; /* verde sección 1 */
-    font-size: clamp(1.9rem, 4.2vw, 3rem); 
-    line-height: 1.3;
+    color: #1E5A33;
+    font-size: clamp(1.9rem, 4.2vw, 3rem);
     text-align: justify;
     margin-bottom: 60px;
 }
 
-/* =============================
-   MAPA DE FLOURISH
-============================= */
-
-.flourish-map-box {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
-}
-
-.flourish-map-box .flourish-embed {
-    width: 100%;
-    min-height: 600px; 
-}
-
-/* DESCRIPCIÓN DEL MAPA */
-.map-description {
-    font-size: clamp(1.2rem, 2vw, 1.7rem);
-    color: #1E5A33;
-    text-align: justify;
-    line-height: 1.5;
-    max-width: 1200px;
-    margin: 20px auto 80px auto;
-}
-
-/* =============================
-   INTRO TEXTO ANTES DEL GRÁFICO FINAL
-============================= */
-.beige-intro-graph {
-    font-family: 'Figtree', sans-serif;
-    color: #1E5A33;
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 50px;
-}
-
-/* =============================
-   GRÁFICO FINAL
-============================= */
-.final-chart-box {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    text-align: center;
-}
-
-.final-chart {
-    width: 100%;
-    max-width: 1100px;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
-}
-
-.final-chart-description {
-    font-size: clamp(1.2rem, 2vw, 1.7rem);
-    color: #1E5A33;
-    margin-top: 20px;
-    text-align: justify;
-    line-height: 1.5;
-}
-
 /* ============================================================
-   SECCIÓN ROSA — RANKEO VEGANO
+   SECCIÓN VERDE OSCURO FINAL — TEXTO NARANJA
 ============================================================ */
 
 .green-section {
     background: #143B24;
     padding: 120px 20px;
-    color: #ffb347; 
+    color: #ffb347; /* 🔥 EL COLOR QUE PEDISTE */
     font-family: 'Figtree', sans-serif;
 }
 
@@ -449,6 +320,7 @@ body {
     text-align: justify;
     line-height: 1.35;
     margin-bottom: 50px;
+    color: #ffb347; /* asegurado */
 }
 
 .green-body {
@@ -457,7 +329,7 @@ body {
     text-align: justify;
     line-height: 1.6;
     margin-bottom: 50px;
-    padding-left: 0; /* si quieres el margen como sección naranja, avísame */
+    color: #ffb347; /* asegurado */
 }
 
 .pink-chart-wrapper {
@@ -473,17 +345,6 @@ body {
     border-radius: 14px;
     display: block;
     margin: 0 auto;
-}
-
-.flourish-map-box {
-    width: 100%;
-    max-width: 1400px;     /* mismo ancho editorial del texto */
-    margin: 60px auto;     /* separaciones arriba y abajo */
-    text-align: center;
-}
-
-.flourish-embed {
-    width: 100%;
 }
 
 
