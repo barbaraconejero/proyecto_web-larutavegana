@@ -18,13 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriter, 800);
 });
 
+
 /* ============================================================
-   SCROLL DESDE LA LUPA → SECCIÓN INTRO (seccion2)
+   SCROLL DESDE LA LUPA → SECCIÓN INTRO
 ============================================================ */
 function scrollToNextSection() {
     const next = document.getElementById("seccion2");
     if (next) next.scrollIntoView({ behavior: "smooth" });
 }
+
 
 /* ============================================================
    MAZO DE TARJETAS (animación)
@@ -61,8 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
     rearrange();
 });
 
+
 /* ============================================================
-   FADE-IN DE LA SECCIÓN INTRO
+   FADE-IN SECCIÓN INTRO
 ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
     const introSection = document.querySelector(".intro-section");
@@ -78,8 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     observerIntro.observe(introSection);
 });
 
+
 /* ============================================================
-   APARICIÓN SUAVE DE LAS FIGURAS VERDES (si existieran)
+   ANIMACIÓN DE FIGURAS VERDES (opcional)
 ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
     const shapes = document.querySelectorAll(".veggie-shape");
@@ -99,19 +103,60 @@ document.addEventListener("DOMContentLoaded", () => {
     shapes.forEach(el => observerShapes.observe(el));
 });
 
+
 /* ============================================================
-   SCROLL DESDE EL BOTÓN ZANAHORIA → SECCIÓN NARANJA
+   SCROLL HACIA SECCIÓN NARANJA (si existe botón)
 ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-
     const btnNext = document.getElementById("btn-next-naranja");
-
     if (!btnNext) return;
 
     btnNext.addEventListener("click", () => {
         const destino = document.getElementById("seccion-naranja");
         if (destino) destino.scrollIntoView({ behavior: "smooth" });
     });
+});
+
+
+/* ============================================================
+   MODALES — JS OPCIONAL (abren/cerran si quieres usar JS)
+============================================================ */
+function openModal(id) {
+    const m = document.getElementById(id);
+    if (m) m.style.display = "flex";
+}
+
+function closeModal(id) {
+    const m = document.getElementById(id);
+    if (m) m.style.display = "none";
+}
+/* ============================================
+   CARRUSEL FUNCIONAL PARA TODAS LAS FICHAS
+============================================ */
+document.querySelectorAll(".carousel").forEach(carousel => {
+    const track = carousel.querySelector(".carousel-track");
+    const images = Array.from(track.children);
+    const nextBtn = carousel.querySelector(".next");
+    const prevBtn = carousel.querySelector(".prev");
+
+    let index = 0;
+
+    function updateCarousel() {
+        const width = images[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+    });
+
+    window.addEventListener("resize", updateCarousel);
 });
 
 
