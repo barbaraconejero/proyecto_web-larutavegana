@@ -707,11 +707,13 @@ body {
     max-width: 700px;
     margin: 0 auto;
     padding: 50px 60px;
-    background-image: url("assets/images/texture-paper.jpg");
-    background-size: cover;   /* ocupa todo sin repetirse */
-    background-position: center;
-    background-repeat: no-repeat;
+
+    /* FONDO LISO — QUEDA SOLO COLOR */
+    background-color: #FFF6E7 !important;
+    background-image: none !important;
+
     border-radius: 12px;
+
 
     /* efecto boleta térmica */
     filter: contrast(1.05) brightness(1.08);
