@@ -625,6 +625,157 @@ body {
     text-align: justify;
     margin-bottom: 35px;
 }
+/* ============================================================
+   SECCIÓN RANKING AJUSTADA AL ESTILO VERDE
+============================================================ */
+
+.ranking-section {
+    background-color: #1E5A33;  /* mismo fondo verde oscuro */
+    padding: 100px 20px;
+    color: #FFF6E7; /* texto blanco */
+}
+
+.ranking-container {
+    width: 90%;
+    max-width: 1400px; /* mismo ancho del resto */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Título en naranja tipo Lilita One grande */
+.ranking-title {
+    font-family: 'Lilita One', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    color: #ffb347; /* naranja */
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+/* Párrafos en blanco tipo Figtree */
+.ranking-text {
+    font-family: 'Figtree', sans-serif;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    line-height: 1.6;
+    color: #FFF6E7;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ============================================================
+   SECCIÓN RANKING — MISMOS ESTILOS QUE SECCIÓN VERDE
+============================================================ */
+.green-section-ranking {
+    background-color: #1E5A33; /* mismo verde */
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.green-container-ranking {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Título naranja */
+.ranking-title {
+    font-family: 'Lilita One', sans-serif;
+    color: #ffb347;
+    font-size: clamp(1.6rem, 4.5vw, 3.8rem);
+    font-weight: 600;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* Párrafos blancos justificados */
+.ranking-text {
+    font-family: 'Figtree', sans-serif;
+    color: #FFF6E7;
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+/* ============================================
+   RECEIPT / SERVILLETTE STYLE BLOCK
+============================================ */
+
+/* ===== RECEIPT CON TEXTURA REAL ===== */
+.receipt-box {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    background-image: url("assets/images/texture-paper.jpg");
+    background-size: cover;   /* ocupa todo sin repetirse */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+
+    /* efecto boleta térmica */
+    filter: contrast(1.05) brightness(1.08);
+
+    /* sombra sutil para levantarlo del fondo */
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+
+    font-family: 'Figtree', sans-serif;
+    color: #333;
+}
+
+/* título del recibo */
+.receipt-title {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* franja punteada */
+.receipt-dots {
+    border-top: 2px dotted #555;
+    margin: 20px 0;
+}
+
+/* texto */
+.receipt-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+/* estrellas del ranking */
+.stars {
+    color: #ffb347;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+.footer-ruta {
+    background-color: #143B24;   /* Verde oscuro de tu sitio */
+    color: #FFF6E7;              /* Blanco cálido */
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Figtree', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footer-ruta a {
+    color: #FFF6E7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-ruta a:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 
 
